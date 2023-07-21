@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>workflow.AI</title>
+</head>
+<body style="background-color: rgba(3,5,7,255)">
+
+    <!--workflow.AI heading, the AI is shown then the workflow. appears-->
+    <!--Welcome to, comes in from left, workflow. from right, then AI lights up-->
+
+    <header>
+        <section id="main">
+            <div id="main-elements">
+                <!--TEXT-->
+                <div class= "vidtxt">
+                    <h1 id="vidtxt"><span class="hidden">workflow.</span><span class="AI-span">AI</span></h1>
+                </div>
+
+                <!--BACKGROUND-->
+                <div class="vidiv">
+                    <video autoplay loop muted plays-inline src="/assets/main-video.mp4" id="main-video"></video>
+                    <video autoplay loop muted plays-inline src="/assets/main-video2.mp4" id="main-video2"></video>
+                </div>
+            </div>
+
+        </section>
+    </header>
+
+    <main>
+        <section id="chat">
+            <div class="container-fluid" id="chat-elements">
+                <h1 style="color: aliceblue; padding-bottom: 50px;">You can access the chatbots <a href="/chat.html" id="chat-link">HERE</a></h1>
+                <a href="/chat.html"><button id="chat-button">Start Chatting</button></a>
+            </div>
+        </section>
+
+        <section id="about">
+
+            <!--about-intro-text-->
+            <div class="container" id="about-header">
+                <h1 class="text-start about-header hidden-right" id="about-header-1">Welcome to </h1>
+                <h1 class="text-end about-header hidden-left" id="about-header-2"> workflow.<span class="AI-span">AI</span>!</h1>
+            </div>
+            <div class="container-fluid container about-contents">
+                <div class="row">
+                    <div class="col-lg-6 text-center about-contents align-items-center justify-content-center hidden" style="display: flex;"><img class="about-img" src="/assets/About1.jpg" alt="Man and Robot shaking hands"></div>
+                    <div class="col-lg-6 about-contents">
+                        <p class="about-points hidden-left">At workflow.AI, we are passionate about utilizing the potential of artificial intelligence to transform the way you work. As AI advances, its ability to perform tasks with high efficiency would affect most major jobs. Our mission is to empower individuals by providing intelligent solutions that enhance productivity, efficiency, and overall work experience.</p>
+                        <p class="about-points hidden-left">Experience a personal assistant that understands your needs, communicates seamlessly, and effortlessly navigates tasks. Powered by advanced language models, our intelligent virtual assistants excel at generating accurate reports and drafting compelling content. </p>
+                        <p class="about-points hidden-left">Workflow.AI is designed to adapt to your unique preferences, and would be a valuable companion in your daily work routine. Whether you're a busy professional, an entrepreneur, or a student, our AI assistant is capable of handling a wide range of tasks, enabling you to focus on what truly matters.</p>
+                    </div>
+                    <div class="con d-md-block  d-none"><div class="lines"><div class="circle"></div></div></div>
+                    <div class="col-lg-6 text-center about-contents align-items-center justify-content-center d-lg-none d-md-block d-none hidden" style="display: flex;"><img class="about-img" src="/assets/About2.jpg" alt="Robot using a computer"></div>
+                    <div class="col-lg-6 about-contents d-md-block d-none">
+                        <p class="about-points hidden-right">We believe that technology should be accessible and user-friendly. That's why our platform provides a seamless experience across multiple channels, including web, mobile, and voice interfaces. Interacting with our chatbots is intuitive, ensuring that you can easily integrate it into your existing workflow without any hassle.</p>
+                        <p class="about-points hidden-right">We prioritize the security and privacy of your data. Our robust infrastructure and stringent data protection measures ensure that your information remains confidential and secure at all times. You can trust Workflow.AI to handle your data responsibly, adhering to the highest standards of privacy and compliance.</p>
+                    </div>
+                    <div class="col-lg-6 text-center about-contents align-items-center justify-content-center d-lg-block d-none hidden" style="display: flex; "><img class="about-img" src="/assets/About2.jpg" alt="Robot using a computer"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quote" class="parallax">
+            <div class="parallax-inner">
+                <div id="quote-txt" class="hidden text-center justify-content-center align-items-center"><h1 class="container" id="quote-txxt">"Experience the future of work with Workflow.AI - where artificial intelligence meets your work efficiency goals!"</h1>
+                </div>  
+            </div>
+        </section>
+
+        <section id="features">
+
+            <div id="features-div">
+                <div class="container">
+                    <h1 class=" hidden" id="features-header">Features</h1>
+                <div class="row about-contents align-items-center" >
+
+                    <div class="col-xl-3 col-md-6 col-12 mb-4">
+                        <div class="hidden-left card" style="border-radius: 30px;">
+                            <div class="resource-img"><img src="/assets/productivity-pro.png" class="card-img-top" alt="Augment Productivity" style="height: 70%; width: 70%; display: flex;"></div>
+                            <div class="card-body text-center pb-4">
+                              <h5 class="card-title">Augment Productivity</h5>
+                              <p class="card-text">Our AI technology is designed to help you get more done in less time. Whether you need help with mundane tasks or complex projects, our AI assistant is here to help.</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 mb-4">
+                        <div class="o2 card hidden-left" style="border-radius: 30px;">
+                            <div class="resource-img"><img src="/assets/integration-pro.png" class="card-img-top" alt="Easy Integration" style="height: 70%; width: 70%;"></div>
+                            <div class="card-body text-center pb-4">
+                              <h5 class="card-title">Easy Integration</h5>
+                              <p class="card-text">Integrate our AI technology into your existing workflow with ease. Our team will work with you to ensure a seamless transition.</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 mb-4">
+                        <div class="o3 card hidden-left " style="border-radius: 30px;">
+                            <div class="resource-img"><img src="/assets/robot-pro.png" class="card-img-top" alt="Chat with Bot" style="height: 70%; width: 70%;"></div>
+                            <div class="card-body text-center pb-4" style="height: 100%;">
+                              <h5 class="card-title">Chat with Our Bots</h5>
+                              <p class="card-text">Our ever-improving bots are available for free access. Click to learn more </p>
+                              <a href="/chat.html" class="btn" style="color: #000; border: 2px solid #000;">Start Chatting</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 mb-4">
+                        <div class="o4 card hidden-left" style="border-radius: 30px;">
+                            <div class="resource-img"><img src="/assets/future-plan-pro.png" class="card-img-top" alt="Future Plans" style="height: 70%; width: 70%;"></div>
+                            <div class="card-body text-center pb-4">
+                              <h5 class="card-title">Future Plans</h5>
+                              <p class="card-text">As we advance and scale even more, more technologies will be implemented. AI is a fairly new concept and as it widens, we plan on taking advantage of some of its benefits in following products.</p>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <section id="contact">
+            <div id="contact-div">
+                <h2 class="text-center text-light">Website Completely Designed by David Adeniyi | 2023 NorCalHacks</h2>
+            </div>
+        </section>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script
+</body>
+</html>
