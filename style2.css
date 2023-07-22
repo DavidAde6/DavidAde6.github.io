@@ -1,3 +1,7 @@
+* {
+    transition: 0.5s;
+}
+
 body {
     background-image: radial-gradient(ellipse at center, #040521, #010008); 
     background-size: cover; 
@@ -33,4 +37,12 @@ section{
 .ai-span{
     color: rgb(206, 206, 41);
     text-shadow: 0 0 20px rgba(124, 124, 5, 0.462), 0 0 30px rgba(124, 124, 5, 0.462), 0 0 50px rgba(124, 124, 5, 0.462);
+}
+
+
+.card:hover{
+    transform: scale(1.1);
+    background-color: #ffcc00;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
