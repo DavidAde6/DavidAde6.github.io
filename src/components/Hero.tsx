@@ -2,15 +2,18 @@ import { motion } from "motion/react";
 import { SparkleIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cvUrl from "../assets/CV.pdf";
+import { stagger, fadeUp } from "@/lib/animations";
 
 export const Hero = () => {
-  const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
-
   return (
-    <motion.section>
+    <motion.section
+      id="Hero"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={stagger(0)}
+      className="md:pt-20"
+    >
       <motion.p
         variants={fadeUp}
         className="flex items-center justify-center py-1 gap-2 border border-neutral-600 rounded-sm w-32"
