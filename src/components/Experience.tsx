@@ -26,7 +26,7 @@ export const Experience = () => {
       >
         Career
       </motion.h2>
-      <div className="grid gap-x-10 my-16 md:grid-cols-2">
+      <div className="grid gap-x-10 mt-32 md:grid-cols-2">
         <motion.div variants={fadeUp} className="mb-16 md:mb-0">
           <h2 className="text-3xl font-semibold mb-8">Education</h2>
           <div className="space-y-8 border-l border-neutral-700 pl-6">
