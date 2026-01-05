@@ -1,6 +1,7 @@
 import { SparkleIcon } from "lucide-react";
 import { motion } from "motion/react";
 import { stagger, fadeUp } from "@/lib/animations";
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -117,26 +118,31 @@ export const Projects = () => {
                       className=" h-100 object-cover rounded-sm"
                     />
                   </div>
-                  <h3 className="text-xl font-bold">{project.title} | </h3>
-                  <span className="flex flex-wrap gap-2 mt-4">
-                    {project.stack.map((logo, i) => (
-                      <img
-                        key={i}
-                        src={logo}
-                        alt={`${logo}`}
-                        className="w-8 h-8"
-                      />
-                    ))}
-                  </span>
+                  <div className="mt-5 mb-5 flex flex-wrap items-center">
+                    <h3 className="text-xl font-bold">{project.title} | </h3>
+                    <div className=" ml-4 flex flex-wrap gap-3 ">
+                      {project.stack.map((logo, i) => (
+                        <img
+                          key={i}
+                          src={logo}
+                          alt={`${logo}`}
+                          className="w-8 h-8 object-contain"
+                        />
+                      ))}
+                    </div>
+                  </div>
                   <p className="mt-2">{project.description}</p>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block text-blue-500 hover:underline"
-                  >
-                    View Project
-                  </a>
+                  <div className="flex">
+                    <Button className="m-5 ml-auto">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Project
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </CarouselItem>
             ))}
