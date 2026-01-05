@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { SparkleIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cvUrl from "../assets/CV.pdf";
-import { stagger, fadeUp } from "@/lib/animations";
+import { stagger, fadeUp } from "@/lib/constants";
 
 export const Hero = () => {
   return (

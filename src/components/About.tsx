@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { stagger, fadeUp } from "@/lib/animations";
+import { stagger, fadeUp } from "@/lib/constants";
 import { SparkleIcon } from "lucide-react";
 
 export const About = () => {
@@ -14,7 +14,7 @@ export const About = () => {
     >
       <motion.p
         variants={fadeUp}
-        className="flex items-center justify-center py-1 gap-2 border border-neutral-600 rounded-sm w-25"
+        className="flex items-center justify-center py-1 gap-2 border border-neutral-600 rounded-sm w-20"
       >
         <SparkleIcon size={15} />
         <span>About</span>
