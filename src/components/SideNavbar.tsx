@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { User, Presentation, Briefcase, Mail } from "lucide-react";
+import { House, User, Presentation, Briefcase, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const SideNavbar = () => {
   const links = [
-    { label: "Home", link: "#Home", icon: User },
+    { label: "Home", link: "#Home", icon: House },
     { label: "Projects", link: "#Projects", icon: Presentation },
+    { label: "About", link: "#About", icon: User },
     { label: "Experience", link: "#Experience", icon: Briefcase },
     { label: "Contact", link: "#Contact", icon: Mail },
   ];

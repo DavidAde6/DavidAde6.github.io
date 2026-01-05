@@ -7,7 +7,7 @@ import { stagger, fadeUp } from "@/lib/animations";
 export const Hero = () => {
   return (
     <motion.section
-      id="Hero"
+      id="Home"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}

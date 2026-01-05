@@ -1,6 +1,8 @@
 import { SparkleIcon } from "lucide-react";
+import { useRef } from "react";
 import { motion } from "motion/react";
 import { stagger, fadeUp } from "@/lib/animations";
+import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -79,6 +81,14 @@ export const Projects = () => {
     },
   ];
 
+  const autoplay = useRef(
+    Autoplay({
+      delay: 3000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+    })
+  );
+
   return (
     <motion.section
       initial="hidden"
@@ -103,7 +113,11 @@ export const Projects = () => {
         My Projects
       </motion.h2>
       <motion.div variants={fadeUp} className="m-15">
-        <Carousel className="w-full" opts={{ align: "start", loop: true }}>
+        <Carousel
+          className="w-full"
+          opts={{ align: "start", loop: true }}
+          plugins={[autoplay.current]}
+        >
           <CarouselContent>
             {projects.map((project, index) => (
               <CarouselItem
@@ -111,15 +125,15 @@ export const Projects = () => {
                 className="lg:pl-40 lg:pr-40 lg:basis-1/1"
               >
                 <div className="p-4 border border-neutral-600 rounded-sm">
-                  <div className="flex align-center justify-center justify-content-center align-items-center">
+                  <div className="flex justify-center">
                     <img
                       src={project.image}
                       alt={project.title}
                       className=" h-100 object-cover rounded-sm"
                     />
                   </div>
-                  <div className="mt-5 mb-5 flex flex-wrap items-center">
-                    <h3 className="text-xl font-bold">{project.title} | </h3>
+                  <div className="mt-5 mb-5 flex flex-wrap justify-center items-center">
+                    <h3 className="text-xl font-bold">{project.title} </h3>
                     <div className=" ml-4 flex flex-wrap gap-3 ">
                       {project.stack.map((logo, i) => (
                         <img
