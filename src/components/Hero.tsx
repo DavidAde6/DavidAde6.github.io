@@ -12,7 +12,7 @@ export const Hero = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={stagger(0)}
-      className="md:pt-20"
+      className="md:pt-5"
     >
       <motion.p
         variants={fadeUp}
@@ -24,7 +24,7 @@ export const Hero = () => {
 
       <motion.h1
         variants={fadeUp}
-        className="text-4xl md:text-5xl lg:text-6xl font-semibold capitalize mt-2 max-w-3xl md:leading-16"
+        className="mt-10 text-4xl md:text-5xl lg:text-6xl font-semibold capitalize mt-2 max-w-3xl md:leading-16"
       >
         👋 Hi , I'm <span className="text-primary">David Adeniyi</span>{" "}
         Cloud-Native AI&ML Developer
@@ -32,7 +32,7 @@ export const Hero = () => {
 
       <motion.div
         variants={fadeUp}
-        className="mt-6 text-lg md:text-xl text-neutral-400 gap-2 flex max-w-3xl"
+        className="mt-15 text-lg md:text-xl text-neutral-400 gap-2 flex max-w-3xl"
       >
         <Button asChild>
           <a href="#Projects">My Projects</a>
