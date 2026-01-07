@@ -52,10 +52,7 @@ export const Projects = () => {
         >
           <CarouselContent>
             {projects.map((project, index) => (
-              <CarouselItem
-                key={index}
-                className="lg:pl-40 lg:pr-40 lg:basis-1/1"
-              >
+              <CarouselItem key={index} className=" lg:basis-1/1">
                 <div className="p-4 border border-neutral-600 rounded-sm">
                   <div className="flex justify-center">
                     <img
@@ -93,8 +90,10 @@ export const Projects = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <div className="hidden md:block">
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
         </Carousel>
       </motion.div>
     </motion.section>
