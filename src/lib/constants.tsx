@@ -22,7 +22,11 @@ import html from "../assets/logos/html-logo.png";
 import css from "../assets/logos/css-logo.png";
 import flask from "../assets/logos/Flask.png";
 import js from "../assets/logos/JavaScript-Logo.png";
-import incomplete from "../assets/logos/incomplete.png";
+import platter from "../assets/images/Platter.png";
+import portfolio from "../assets/images/Portfolio-portrait.png";
+import oldPortfolio from "../assets/images/PersonalPortfolio.png";
+import pathfinding from "../assets/images/Pathfinding.png";
+import no2 from "../assets/images/AirPollution.png";
 
 export const stagger = (delay = 0) => ({
   hidden: {},
@@ -42,7 +46,7 @@ export const fadeUp = {
 export const projects = [
   {
     title: "Platter",
-    image: incomplete,
+    image: platter,
     description:
       "An AI-powered Nutrition Platform built to simplify food tracking for diabetics using image-based food analysis.",
     stack: [python, pytorch, fastapi, docker, aws, git, github, kub, pillow],
@@ -50,7 +54,7 @@ export const projects = [
   },
   {
     title: "Atmospheric NO₂ level Forecaster ",
-    image: incomplete,
+    image: no2,
     description:
       "A machine learning model to predict atmospheric NO₂ levels using the europeans space agency's satellite data, and google earth engine.",
     stack: [python, tensorflow, gee, esa, numpy, pandas, git, github],
@@ -58,7 +62,7 @@ export const projects = [
   },
   {
     title: "Developer Portfolio",
-    image: incomplete,
+    image: portfolio,
     description:
       "A personal portfolio website showcasing my projects, skills, and experience.",
     stack: [react, tail, mot, ts, git, github, html, css],
@@ -66,7 +70,7 @@ export const projects = [
   },
   {
     title: "Interactive Pathfinding Visualizer",
-    image: incomplete,
+    image: pathfinding,
     description:
       "A web application built to understand and teach pathfinding algorithms learned in class.",
     stack: [python, js, flask, html, css],
@@ -74,7 +78,7 @@ export const projects = [
   },
   {
     title: "Old Portfolio",
-    image: incomplete,
+    image: oldPortfolio,
     description: "A previous version of my personal portfolio website.",
     stack: [react, mot, ts, html, css],
     link: "#",
