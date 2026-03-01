@@ -1,6 +1,6 @@
 // ASSETS------------------------------------------
 
-import python from "../assets/logos/python.jpg";
+import python from "../assets/logos/python.png";
 import pytorch from "../assets/logos/PyTorch.png";
 import tensorflow from "../assets/logos/tensorflow.png";
 import aws from "../assets/logos/AWS.png";
