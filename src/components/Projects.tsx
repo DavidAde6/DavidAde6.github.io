@@ -1,100 +1,58 @@
-import { SparkleIcon } from "lucide-react";
-import { useRef } from "react";
+import { ExternalLink, SparkleIcon } from "lucide-react";
 import { motion } from "motion/react";
-import { stagger, fadeUp, projects } from "@/lib/constants";
-import Autoplay from "embla-carousel-autoplay";
-import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { fadeUp, projects, stagger } from "@/lib/constants";
 
 export const Projects = () => {
-  const autoplay = useRef(
-    Autoplay({
-      delay: 3000,
-      stopOnInteraction: false,
-      stopOnMouseEnter: true,
-    })
-  );
-
   return (
     <motion.section
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={stagger(0)}
-      className="mt-50 scroll-mt-10"
+      className="mt-30 scroll-mt-10"
       id="Projects"
     >
       <motion.p
         variants={fadeUp}
-        className="flex items-center justify-center py-1 gap-2 border border-neutral-600 rounded-sm w-25"
+        className="flex w-25 items-center justify-center gap-2 rounded-sm border border-neutral-600 py-1"
       >
         <SparkleIcon size={15} />
         <span>Projects</span>
       </motion.p>
 
-      <motion.h2
+      <motion.div
         variants={fadeUp}
-        className="flex align-items-center justify-center mt-5 text-3xl md:text-4xl lg:text-5xl font-semibold"
+        className="mt-15 flex flex-wrap items-end justify-between gap-4"
       >
-        My Projects
-      </motion.h2>
-      <motion.div variants={fadeUp} className="m-15">
-        <Carousel
-          className="w-full"
-          opts={{ align: "start", loop: true }}
-          plugins={[autoplay.current]}
-        >
-          <CarouselContent>
-            {projects.map((project, index) => (
-              <CarouselItem key={index} className=" lg:basis-1/1">
-                <div className="p-4 border border-neutral-600 rounded-sm">
-                  <div className="flex justify-center">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className=" h-100 object-cover rounded-sm"
-                    />
-                  </div>
-                  <div className="mt-5 mb-5 flex flex-wrap justify-center items-center">
-                    <h3 className="text-xl font-bold">{project.title} </h3>
-                    <div className=" ml-4 flex flex-wrap gap-3 ">
-                      {project.stack.map((logo, i) => (
-                        <img
-                          key={i}
-                          src={logo}
-                          alt={`${logo}`}
-                          className="w-8 h-8 object-contain"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                  <p className="mt-2">{project.description}</p>
-                  <div className="flex">
-                    <Button className="m-5 ml-auto">
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        View Project
-                      </a>
-                    </Button>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="hidden md:block">
-            <CarouselPrevious />
-            <CarouselNext />
-          </div>
-        </Carousel>
+        <p className="max-w-md text-sm text-muted-foreground">
+          A few things I have built and explored.
+        </p>
+      </motion.div>
+
+      <motion.div
+        variants={fadeUp}
+        className="mt-8 grid gap-3 md:grid-cols-2"
+      >
+        {projects.map((project) => (
+          <article
+            key={project.title}
+            className="group relative rounded-sm border border-neutral-600 p-5 transition-colors hover:bg-muted/50"
+          >
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View ${project.title} source code`}
+              className="absolute right-5 top-5 rounded-sm p-1 text-muted-foreground transition-colors hover:bg-background hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2"
+            >
+              <ExternalLink size={18} aria-hidden="true" />
+            </a>
+            <h3 className="pr-10 text-lg font-bold">{project.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {project.description}
+            </p>
+          </article>
+        ))}
       </motion.div>
     </motion.section>
   );

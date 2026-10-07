@@ -1,33 +1,3 @@
-// ASSETS------------------------------------------
-
-import python from "../assets/logos/python.png";
-import pytorch from "../assets/logos/PyTorch.png";
-import tensorflow from "../assets/logos/tensorflow.png";
-import aws from "../assets/logos/AWS.png";
-import docker from "../assets/logos/Docker.png";
-import fastapi from "../assets/logos/FASTAPI.png";
-import git from "../assets/logos/git.png";
-import github from "../assets/logos/github.png";
-import kub from "../assets/logos/Kubernetes.png";
-import pillow from "../assets/logos/pillow.png";
-import gee from "../assets/logos/earth-engine-logo.png";
-import esa from "../assets/logos/esa.png";
-import numpy from "../assets/logos/numpy-logo.png";
-import pandas from "../assets/logos/pandas-logo.png";
-import tail from "../assets/logos/tailwindcss.png";
-import mot from "../assets/logos/motion.png";
-import ts from "../assets/logos/Typescript_logo.png";
-import react from "../assets/logos/React.png";
-import html from "../assets/logos/html-logo.png";
-import css from "../assets/logos/css-logo.png";
-import flask from "../assets/logos/Flask.png";
-import js from "../assets/logos/JavaScript-Logo.png";
-import platter from "../assets/images/Platter.png";
-import portfolio from "../assets/images/Portfolio-portrait.png";
-import oldPortfolio from "../assets/images/PersonalPortfolio.png";
-import pathfinding from "../assets/images/Pathfinding.png";
-import no2 from "../assets/images/AirPollution.png";
-
 export const stagger = (delay = 0) => ({
   hidden: {},
   visible: {
@@ -46,43 +16,32 @@ export const fadeUp = {
 export const projects = [
   {
     title: "Platter",
-    image: platter,
     description:
-      "An AI-powered Nutrition Platform built to simplify food tracking for diabetics using image-based food analysis.",
-    stack: [python, pytorch, fastapi, docker, aws, git, github, kub, pillow],
+      "Platter helps you find meals that satisfy your cravings while fitting your preferences, dietary needs, and health goals.",
+    technologies: ["Python", "PyTorch", "FastAPI", "Docker", "AWS"],
     link: "https://github.com/DavidAde6/Platter",
   },
   {
     title: "Atmospheric NO₂ level Forecaster ",
-    image: no2,
     description:
       "A machine learning model to predict atmospheric NO₂ levels using the europeans space agency's satellite data, and google earth engine.",
-    stack: [python, tensorflow, gee, esa, numpy, pandas, git, github],
+    technologies: ["Python", "TensorFlow", "Google Earth Engine"],
     link: "https://github.com/DavidAde6/Sentinel-5P-NO2-Prediction",
   },
   {
     title: "Developer Portfolio",
-    image: portfolio,
     description:
       "A personal portfolio website showcasing my projects, skills, and experience.",
-    stack: [react, tail, mot, ts, git, github, html, css],
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
     link: "https://github.com/DavidAde6/Developer-Portfolio",
   },
   {
     title: "Interactive Pathfinding Visualizer",
-    image: pathfinding,
     description:
       "A web application built to understand and teach pathfinding algorithms learned in class.",
-    stack: [python, js, flask, html, css],
-    link: "https://davidxde.pythonanywhere.com/",
-  },
-  {
-    title: "Old Portfolio",
-    image: oldPortfolio,
-    description: "A previous version of my personal portfolio website.",
-    stack: [react, mot, ts, html, css],
-    link: "#",
-  },
+    technologies: ["Python", "JavaScript", "Flask"],
+    link: "https://github.com/DavidAde6/Interactive-Pathfinding-Algorithms",
+  }
 ];
 
 export const education = [
@@ -114,15 +73,15 @@ export const education = [
 export const experience = [
   {
     year: "2024",
-    title: "Web Developer",
-    institute: "African Foodways Market",
-    desc: "Designed and maintained a responsive e-commerce website, managing both front-end and back-end as well as inventory management",
+    title: "AI Platform Engineering Intern",
+    institute: "Nokia",
+    desc: "Built an end-to-end agentplatform, spanning agent life-cycle, memory, RAG, guardrails, and evaluation across GCP, AWS, Azure, and on-prem.",
   },
   {
     year: "2024",
-    title: "Customer Service Representative",
+    title: "Software Engineer - Business Solutions",
     institute: "African Foodways Market",
-    desc: "Provided excellent customer service, handled inquiries, and resolved issues to ensure customer satisfaction in a fast-paced retail environment.",
+    desc: "Designed and maintained a responsive e-commerce website, managing both front-end and back-end as well as inventory management",
   },
   {
     year: "2023",

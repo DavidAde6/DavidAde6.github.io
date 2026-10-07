@@ -122,6 +122,34 @@
 
   html {
     @apply scroll-smooth;
+    background: oklch(0.141 0.005 285.823);
+    scrollbar-width: thin;
+    scrollbar-color: white oklch(0.141 0.005 285.823);
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.9rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: oklch(0.141 0.005 285.823);
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    background-clip: padding-box;
+    border: 0.14rem solid transparent;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #e5e5e5;
   }
 
   body {

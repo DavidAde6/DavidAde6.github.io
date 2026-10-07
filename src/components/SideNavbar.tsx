@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 export const SideNavbar = () => {
   const links = [
     { label: "Home", link: "#Home", icon: House },
-    { label: "Projects", link: "#Projects", icon: Presentation },
     { label: "About", link: "#About", icon: User },
     { label: "Experience", link: "#Experience", icon: Briefcase },
+    { label: "Projects", link: "#Projects", icon: Presentation },
     { label: "Contact", link: "#Contact", icon: Mail },
   ];
   const [active, setActive] = useState("#Home");
